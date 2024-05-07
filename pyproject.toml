@@ -7,7 +7,7 @@ packages = ["VO2max_ntnu.py", "calories_VO2max.py", "VO2max_Rockport.py",
 	    "VO2max_Brigham_Young.py"]
 
 [project]
-name = "odr"
+name = "VO2max"
 version = "1.0"
 dependencies = [
   "numpy",
