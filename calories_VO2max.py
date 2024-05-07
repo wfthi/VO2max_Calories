@@ -2,8 +2,24 @@ import numpy as np
 from scipy.interpolate import interp1d
 import matplotlib.pyplot as plt
 
+
 """
-Various extimates of VO2max
+Various estimates of VO2max and calories expenditure
+
+Copyright (C) 2024  Wing-Fai Thi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 https://www.verywellfit.com/what-is-vo2-max-3120097
 
@@ -249,6 +265,7 @@ def energy_expenditure_kg(gender, age, weight, VO2max, heart_rate):
     DOI: 10.1080/02640410470001730089
 
     Quotation from the article above:
+    "
     The calorie calculation is of course based on a number of factors and
     takes into account gender,age, weight and HR. We have discussed this
     with various international bodies including the Chief Science Officer at
@@ -275,7 +292,7 @@ def energy_expenditure_kg(gender, age, weight, VO2max, heart_rate):
     accredited white paper journal in sports science for this calculation.
     To explain where they get those numbers from is a thesis from tests done
     Here is the white paper if you wanted to have a look:
-    http://www.braydenwm.com/cal_vs_hr_ref_paper.pdf
+    http://www.braydenwm.com/cal_vs_hr_ref_paper.pdf"
 
     gender male = 1.0, female = 0.0
 
@@ -321,6 +338,8 @@ def invert_Swain(percentage_VO2max):
 
 def Swain(percentage_HRmax):
     """
+    VO2max from Swain formula
+
     Swain DP, Abernathy KS, Smith CS, Lee SJ, Bunn SA.
     Target heart rates for the development of cardiorespiratory
     fitness. Med Sci Sports Exerc. January 1994. 26(1): 112–116.
